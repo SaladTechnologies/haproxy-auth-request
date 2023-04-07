@@ -80,7 +80,7 @@ end
 -- header_match checks whether the provided header matches the pattern.
 -- pattern is a comma-separated list of Lua Patterns.
 function header_match(header, pattern)
-	if header == "content-length" or header == "host" or pattern == "-" then
+	if header == "content-length" or pattern == "-" then
 		return false
 	end
 	for p in pattern:gmatch("[^,]*") do
